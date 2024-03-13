@@ -3,15 +3,17 @@ from flask import Flask, jsonify, request
   
 # creating a Flask app 
 app = Flask(__name__) 
-  
 
 @app.route('/', methods=['GET', 'POST']) 
 def home(): 
     if request.method == 'GET': 
-        client_ip = request.remote_addr
+        client_ip = request.headers.get('X-Forwarded-For')
+        # If X-Forwarded-For header is not present, get the remote address
+        if not client_ip:
+            client_ip = request.remote_addr
 
         data = "hello world"
-        return jsonify({'data': data,'your_ip':client_ip}) 
+        return jsonify({'data': data, 'your_ip': client_ip}) 
   
 # A simple function to calculate the square of a number 
 # the number to be squared is sent in the URL when we use GET 
