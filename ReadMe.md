@@ -1,6 +1,6 @@
 ## Cloud Computing Presentation QUICK Tutorial 
 ### Flask Server Hosting in AWS EC2
-### github  : <a href='https://github.com/saiguptha2003/cloudapi.git'>https://github.com/saiguptha2003/cloudapi.git</a>
+### github clone url  : <a href='https://github.com/saiguptha2003/cloudapi.git'>https://github.com/saiguptha2003/cloudapi.git</a>
 
 #### dockerfile Content:
 ```dockerfile
