@@ -4,14 +4,14 @@ from flask import Flask, jsonify, request
 # creating a Flask app 
 app = Flask(__name__) 
   
-# on the terminal type: curl http://127.0.0.1:5000/ 
-# returns hello world when we use GET. 
-# returns the data that we send when we use POST. 
+
 @app.route('/', methods=['GET', 'POST']) 
 def home(): 
     if request.method == 'GET': 
+        client_ip = request.remote_addr
+
         data = "hello world"
-        return jsonify({'data': data}) 
+        return jsonify({'data': data,'your_ip':client_ip}) 
   
 # A simple function to calculate the square of a number 
 # the number to be squared is sent in the URL when we use GET 
