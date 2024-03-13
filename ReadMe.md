@@ -2,6 +2,31 @@
 ### Flask Server Hosting in AWS EC2
 ### github clone url  : <a href='https://github.com/saiguptha2003/cloudapi.git'>https://github.com/saiguptha2003/cloudapi.git</a>
 
+#### after aws ec2 instance establishment
+step 1:
+```bash
+sudo apt update
+
+```
+step 2:
+```bash
+sudo apt upgrade
+```
+step 3:
+
+```bash
+sudo apt install docker.io
+```
+
+step 4:
+```bash
+git clone https://github.com/saiguptha2003/cloudapi.git
+
+```
+if any update in repo 
+```bash
+git pull
+```
 #### dockerfile Content:
 ```dockerfile
 # Use the official Python image as the base image
